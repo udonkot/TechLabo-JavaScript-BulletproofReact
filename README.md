@@ -18,15 +18,19 @@
 　参考：https://qiita.com/uttiy3/items/1b89446e03991c7c2c3d
 
 4.ソース取得
- コマンドプロンプトを起動し、任意のフォルダでgit cloneコマンド実行
- TechLabo-JavaScript-BulletproofReactフォルダが作成される
+ ・コマンドプロンプトを起動し、任意のフォルダでgit cloneコマンド実行
+ 　→TechLabo-JavaScript-BulletproofReactフォルダが作成される
+ ・git checkoutコマンド実行
+ 　→developブランチがチェックアウトされる
 
 ```bash
 git clone https://github.com/udonkot/TechLabo-JavaScript-BulletproofReact.git
+git checkout -b develop
 ```
 
 5.vscode起動
-　TechLabo-JavaScript-BulletproofReactを読み込む
+　・TechLabo-JavaScript-BulletproofReactを読み込む
+　・developブランチになっていることを確認
 
 6.アプリケーション実行
 　vscodeのターミナルを起動し、yarnコマンドを実行
