@@ -2,29 +2,40 @@
 
 ## Get Started
 
-Prerequisites:
+1.vscodeインストール
+　参考：https://qiita.com/mmake/items/2cf2131a0ab5bc431215
 
-- Node 20+
-- Yarn 1.22+
+2.nodeインストール
+　下記サイトからダウンロードしてインストール
+　https://nodejs.org/en/download/package-manager
+　※バージョン20以上のNodeをインストール済の場合はスキップ可
 
-To set up the app execute the following commands.
+　参考：https://qiita.com/YurimyMiyu/items/d4fe132fc9bc8189eff4
+
+3.yarnインストール
+　npmコマンドを使用してインストール
+　※バージョン1.22以上のyarnをインストール済みの場合はスキップ可
+　参考：https://qiita.com/uttiy3/items/1b89446e03991c7c2c3d
+
+4.ソース取得
+ コマンドプロンプトを起動し、任意のフォルダでgit cloneコマンド実行
+ TechLabo-JavaScript-BulletproofReactフォルダが作成される
 
 ```bash
-git clone https://github.com/alan2207/bulletproof-react.git
-cd bulletproof-react
-cd apps/react-vite
-cp .env.example .env
-yarn install
+git clone https://github.com/udonkot/TechLabo-JavaScript-BulletproofReact.git
 ```
 
-##### `yarn dev`
+5.vscode起動
+　TechLabo-JavaScript-BulletproofReactを読み込む
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+6.アプリケーション実行
+　vscodeのターミナルを起動し、yarnコマンドを実行
+```bash
+yarn install
+yarn dev
+```
 
-##### `yarn build`
+7.ブラウザ起動
+ [http://localhost:3000](http://localhost:3000) にアクセスするとトップページが表示
 
-Builds the app for production to the `dist` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-See the section about [deployment](https://vitejs.dev/guide/static-deploy) for more information.
