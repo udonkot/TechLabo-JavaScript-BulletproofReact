@@ -79,15 +79,11 @@ export const ProtectedRoute = ({ children }: { children: React.ReactNode }) => {
   const user = useUser();
   const location = useLocation();
 
-  if (!user.data) {
-    console.log({
-      pathname: location.pathname,
-      redirectTo: paths.auth.login.getHref(location.pathname),
-    });
-    return (
-      <Navigate to={paths.auth.login.getHref(location.pathname)} replace />
-    );
-  }
+  // if (!user.data) {
+  //   return (
+  //     <Navigate to={paths.auth.login.getHref(location.pathname)} replace />
+  //   );
+  // }
 
   return children;
 };
