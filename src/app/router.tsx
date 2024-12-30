@@ -23,13 +23,13 @@ export const createAppRouter = (queryClient: QueryClient) =>
         return { Component: RegisterRoute };
       },
     },
-    {
-      path: paths.auth.login.path,
-      lazy: async () => {
-        const { LoginRoute } = await import('./routes/auth/login');
-        return { Component: LoginRoute };
-      },
-    },
+    // {
+    //   path: paths.auth.login.path,
+    //   lazy: async () => {
+    //     const { LoginRoute } = await import('./routes/auth/login');
+    //     return { Component: LoginRoute };
+    //   },
+    // },
     {
       path: paths.app.root.path,
       element: (
@@ -98,6 +98,16 @@ export const createAppRouter = (queryClient: QueryClient) =>
           },
           ErrorBoundary: AppRootErrorBoundary,
         },
+        {
+          path: paths.app.poc_kondo.path,
+          lazy: async () => {
+            const { PoCkondo } = await import('./routes/app/pocs/PoCkondo');
+            return {
+              Component: PoCkondo,
+            };
+          },
+          ErrorBoundary: AppRootErrorBoundary,
+        }
       ],
     },
     {

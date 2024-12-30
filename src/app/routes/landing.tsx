@@ -11,11 +11,14 @@ export const LandingRoute = () => {
   const user = useUser();
 
   const handleStart = () => {
-    if (user.data) {
-      navigate(paths.app.dashboard.getHref());
-    } else {
-      navigate(paths.auth.login.getHref());
-    }
+    navigate(paths.app.dashboard.getHref());
+
+    // 認証処理はコメントアウト
+    // if (user.data) {
+    //   navigate(paths.app.dashboard.getHref());
+    // } else {
+    //   navigate(paths.auth.login.getHref());
+    // }
   };
 
   return (

@@ -42,5 +42,9 @@ export const paths = {
       path: 'profile',
       getHref: () => '/app/profile',
     },
+    poc_kondo: {
+      path: 'pocs/PoCkondo',
+      getHref: () => '/app/pocs/PoCkondo',
+    },
   },
 } as const;
