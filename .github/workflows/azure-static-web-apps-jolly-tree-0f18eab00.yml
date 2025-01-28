@@ -4,10 +4,10 @@ on:
   push:
     branches:
       - develop
-  pull_request:
-    types: [closed]
-    branches:
-      - develop
+  # pull_request:
+  #   types: [closed]
+  #   branches:
+  #     - develop
 
 jobs:
   build_and_deploy_job:
@@ -32,6 +32,11 @@ jobs:
           #api_location: "" # Api source code path - optional
           output_location: "dist" # Built app content directory - optional
           ###### End of Repository/Build Configurations ######
+        env:
+          VITE_APP_API_URL: ${{ secrets.VITE_APP_API_URL }}
+          VITE_APP_BACKEND_FASTAPI_URL: ${{ secrets.VITE_APP_BACKEND_FASTAPI_URL }}
+          VITE_APP_ENABLE_API_MOCKING: ${{ secrets.VITE_APP_ENABLE_API_MOCKING }}
+          API_URL: ${{ secrets.API_URL }}
 
   close_pull_request_job:
     if: github.event_name == 'pull_request' && github.event.action == 'closed'
